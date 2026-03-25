@@ -207,7 +207,7 @@ Always structure output clearly with headers. End every deep dive with:
 After completing EVERY deep dive (any mode), you MUST automatically save the study as Zettelkasten notes.
 
 #### Save Locations (in priority order)
-1. **Mac (Obsidian vault)**: `/Users/jadiebarringeriii/Library/Mobile Documents/iCloud~md~obsidian/Documents/Knowledge 🤯/🍵 Bible Tea`
+1. **Mac (Obsidian vault)**: `/Users/jadiebarringeriii/Library/Mobile Documents/iCloud~md~obsidian/Documents/Knowledge 🤯/🍵 Bible Tea/Studies`
 2. **Fallback (local)**: `~/Bible Study/`
 
 Check if the Mac Obsidian path exists first. If not, use the fallback. These files should NOT be committed to git.
