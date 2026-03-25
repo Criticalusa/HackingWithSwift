@@ -200,4 +200,76 @@ Always structure output clearly with headers. End every deep dive with:
 - **The Bible is one story** — Genesis sets up what Revelation completes; always look for the thread
 - **Physical details are spiritual blueprints** — when God specifies materials, measurements, or directions, there's meaning in every detail
 
+---
+
+### AUTOMATIC OBSIDIAN VAULT EXPORT
+
+After completing EVERY deep dive (any mode), you MUST automatically save the study as Zettelkasten notes into the Obsidian vault at `bible-tea/` (relative to the repo root).
+
+#### Vault Structure
+```
+bible-tea/
+├── .obsidian/          # Obsidian config
+├── MOCs/               # Maps of Content (one per deep dive)
+├── Verses/             # Atomic notes per verse studied
+├── Words/              # Atomic notes per Hebrew/Greek word
+├── Topics/             # Atomic notes per theme/topic
+├── Connections/        # Cross-reference and typology notes
+└── Templates/          # Reusable templates
+```
+
+#### What to Create (automatically, every time):
+
+1. **Atomic Verse Note** → `Verses/{Book} {Chapter}-{Verse}.md`
+   - Frontmatter: tags, book, chapter, verse, original language text, date
+   - Translation comparison, Greek/Hebrew breakdown, cross-refs, context, tea, meditation
+   - Wiki-links (`[[Note Name]]`) to all related word studies and connections
+
+2. **Atomic Word Study Notes** → `Words/{Word} ({StrongsNumber}).md`
+   - One note per key Hebrew/Greek word discovered
+   - Frontmatter: tags, Strong's number, original text, transliteration, root
+   - Definition, semantic range, key appearances, connected notes
+
+3. **Connection Notes** → `Connections/{Descriptive Name}.md`
+   - One note per major cross-reference, typology, or chiastic structure found
+   - Frontmatter: tags, date
+   - The connection explained with wiki-links back to source notes
+
+4. **MOC (Map of Content)** → `MOCs/{Book} {Chapter}-{Verse} — Deep Dive MOC.md`
+   - Links to ALL atomic notes created in this study
+   - Word study table, connections list, tea summary, go-deeper suggestions
+   - Acts as the "hub" for this entire deep dive
+
+#### Naming Conventions
+- Use hyphens for verse separators: `John 1-1.md` (not `John 1:1.md` — colons break filenames)
+- Strong's numbers in parens: `Logos (G3056).md`
+- Connections get descriptive names: `Genesis 1-1 — Bereshit Connection.md`
+
+#### Wiki-Linking Rules
+- Every note MUST link to related notes using `[[Note Name]]` syntax
+- Word notes link to verses that use them and to related words
+- Verse notes link to all word studies and connections discovered
+- MOC links to everything created in that session
+- Use tags in frontmatter for filtering: `[verse, word-study, connection, MOC, greek, hebrew, deep-dive]`
+
+#### For Mode B (Word Study)
+- Create the word note in `Words/`
+- Create a MOC in `MOCs/{Word} — Word Study MOC.md`
+
+#### For Mode C (Topic/Theme Study)
+- Create a topic note in `Topics/{Topic Name}.md`
+- Create a MOC in `MOCs/{Topic} — Topic Study MOC.md`
+- Create connection notes for each major cross-reference
+
+#### For Mode E (Passage Comparison)
+- Create verse notes for each passage
+- Create a connection note for the comparison
+- Create a MOC linking them all
+
+#### For Mode F (Name/Genealogy Study)
+- Create notes in `Connections/{Name} — Name Study.md`
+- Create a MOC in `MOCs/{Name} — Genealogy MOC.md`
+
+**IMPORTANT**: Do NOT ask the user if they want notes saved. Just do it automatically after every study. Inform them at the end: "Saved to your Obsidian vault: bible-tea/" with a list of files created.
+
 $ARGUMENTS
