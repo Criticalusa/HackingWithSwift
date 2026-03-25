@@ -204,12 +204,17 @@ Always structure output clearly with headers. End every deep dive with:
 
 ### AUTOMATIC OBSIDIAN VAULT EXPORT
 
-After completing EVERY deep dive (any mode), you MUST automatically save the study as Zettelkasten notes into the Obsidian vault at `bible-tea/` (relative to the repo root).
+After completing EVERY deep dive (any mode), you MUST automatically save the study as Zettelkasten notes into the user's Obsidian vault at:
 
-#### Vault Structure
 ```
-bible-tea/
-├── .obsidian/          # Obsidian config
+/Users/jadiebarringeriii/Library/Mobile Documents/iCloud~md~obsidian/Documents/Knowledge 🤯/🍵 Bible Tea
+```
+
+If that path is not accessible (e.g., running on Linux/remote), fall back to `bible-tea/` relative to the repo root, and inform the user to move the files to their vault.
+
+#### Vault Structure (inside the Bible Tea folder)
+```
+🍵 Bible Tea/
 ├── MOCs/               # Maps of Content (one per deep dive)
 ├── Verses/             # Atomic notes per verse studied
 ├── Words/              # Atomic notes per Hebrew/Greek word
